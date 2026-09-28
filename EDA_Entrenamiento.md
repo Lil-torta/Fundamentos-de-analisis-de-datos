@@ -1,23 +1,23 @@
-# Analisis de un dataset de ejercicios
+# Análisis de un Dataset de Ejercicios
 
-## Descripcion 
+## Descripción
 
-Este proyecto tiene como objetivo hacer un analisis exploratorio de un conjunto de datos con el objetivo de comprender, identificar patrones y detectar valores atipicos y obtener informacion para tener un mejor conocimiento del analisis
+Este proyecto tiene como objetivo realizar un análisis exploratorio de un conjunto de datos para comprender su estructura, identificar patrones, detectar valores atípicos y obtener información que permita un mejor entendimiento del dataset.
 
 ## Objetivos
 
-- Explorar las caracteristicas del dataset
-- Analizar la calidad de los datos
-- Identificar Valores nulos y atipicos
-- Visualizar distribuciones y relaciones entre variables
-- Obtener conclusiones apartir de los datos previamente analizados
+- Explorar las características del dataset.
+- Analizar la calidad de los datos.
+- Identificar Valores nulos y atípicos.
+- Visualizar distribuciones y relaciones entre variables.
+- Obtener conclusiones apartir de los datos previamente analizados.
 
 ## Extructura del proyecto
 
 ```
 Analisis-dataset/
 |- build/     # Reportes o resultados generados
-|- src/       # Archivo de analisi
+|- src/       # Archivo de análisis
 |- imagenes   # Graficas y visualizaciones
 |-  smart_workout_raw_dataset.csv    # Readme.md
 ```
@@ -25,7 +25,7 @@ Analisis-dataset/
 ## Dataset
 Smart_workout_raw_dataset.csv
 
-Este conjunto de datos (dataset) contiene informacion sobre la actividad fisica de los usuarios y atributos relacionados con el entrenamiento. Este dataset esta compuesto por las diferentes tipos de variables como numericas y categoricas las cuales nos van a servir para realizar analisis descriptivos y exploratorios.
+Este conjunto de datos contiene información sobre la actividad física de los usuarios y atributos relacionados con el entrenamiento. El dataset está compuesto por diferentes tipos de variables, tanto numéricas como categóricas, las cuales sirven para realizar análisis descriptivos y exploratorios.
 
 ## Herramientas utilizadas
 - Python
@@ -39,16 +39,16 @@ Este conjunto de datos (dataset) contiene informacion sobre la actividad fisica 
 
 ### 1. Carga de datos
 
-Se importo las librerias y el conjunto de datos, se reviso su extructura general
+Se importaron las librerías y el conjunto de datos. Posteriormente, se revisó su estructura general.
 
 ### 2. Limpieza de datos
 
-Se verificaron los valores nulos presentes en el dataset 
+Se verificaron los valores nulos presentes en el dataset:
 
 ```python
 df.isnull().sum()
 ```
-Se verificaron la exixtencia de valores duplicados 
+También se verificó la existencia de valores duplicados:
 
 ```python
 df.duplicated().sum()
@@ -56,7 +56,7 @@ df.duplicated().sum()
 
 ### 3. Estadisticas descriptivas
 
-Se obtuvieron las medidas basicas de la variable numericas:
+Se obtuvieron las medidas estadísticas básicas de las variables numéricas:
 
 ```python
 df.describe()
@@ -64,7 +64,7 @@ df.describe()
 
 ### 4. Analisis de la variable objetivo
 
-Se obtuvo la variable objetivo para luego analizarla 
+Se identificó la variable objetivo para posteriormente analizar su comportamiento.
 
 ```pthon
 df['rating].value_counts()
@@ -72,7 +72,7 @@ df['rating].value_counts()
 
 ### 5. Visualizacion de datos
 
-Distribucion de la variable ratin:
+Distribucion de la variable rating:
 
 ```python
 sns.countplot(x='rating', data=df)
@@ -81,42 +81,43 @@ plt.show()
 
 ### 6. Analizamos las variables categoricas
 
-Se Analizaron las variables categoricas para identificar la frecuencia de las categorias
+Se analizaron las variables categóricas para identificar la frecuencia de cada categoría.
 
-Para ello se utlizo
+Para ello se utilizó:
 
 ```python
 value_counts()
 ```
 
-y ditintos tipos de graficos los cuales permitieron visualizar:
+y distintos tipos de gráficos que permitieron visualizar:
 
--Categoria mas frecuente
--Categoria menos representante
--Distribucion general de las clases
+-La categoría más frecuente.
+-La categoría menos representada.
+-La distribución general de las clases.
 
 ## Resultados
 
 Se pudo encontrar unos hallazgos como:
 
 -Existencia de valores faltantes.
--Presencia de valores duplicados
--Deteccion de valores atipicos
+-Presencia de valores duplicados.
+-Detección de valores atípicos.
 
 ## Conclusiones
 
-El analisis permitio tener una mejor compresion del dataset, identificar la variable objetivo conocer el comportamiento de las variables numericas y categoricas, la visualizacion ayudaron a encontrar los patrones y posibles anomalias en los datos.
+El análisis permitió obtener una mejor comprensión del dataset, identificar la variable objetivo y conocer el comportamiento de las variables numéricas y categóricas. Las visualizaciones ayudaron a detectar patrones y posibles anomalías en los datos.
 
 ## Aprendizaje 
 
-Este proyecto me hizo fortalecer conocimientos en:
+Este proyecto me permitió fortalecer conocimientos en:
 
--Manipulacion de datos
--Visualizacion de datos con algunas librerias
--Identificar las variables objetivos
+-Manipulación de datos.
+-Visualización de datos mediante diferentes librerías.
+-Identificación de variables objetivo.
+-Análisis exploratorio de datos (EDA).
 
 ## Autor
 
-Jose Gael Licea Vazquez
+José Gael Licea Vázquez
 
-Proyecto desarrollado como practica de la materia de analitica de datos de la carrera de inteligencia artificial. Se desarrollo utilizando python y tecnicas de exploracion de datos.
+Proyecto desarrollado como práctica de la materia de Analítica de Datos de la carrera de Inteligencia Artificial. Se desarrolló utilizando Python y técnicas de exploración y análisis de datos.
